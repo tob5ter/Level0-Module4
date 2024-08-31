@@ -16,7 +16,7 @@ public class RedSquare {
 	public static void main(String[] args) {
 		
 		boolean isRed = false;
-		boolean isSquare = true;
+		boolean isSquare = false;
 		
 		// The && shown here means that both booleans must be true for the 
 		// entire if statement to be true. It is referred to as the "and"
@@ -24,9 +24,18 @@ public class RedSquare {
 		if(isRed && isSquare) {
 			drawRedSquare();
 		}
-		else {
+		else if (!isRed&&isSquare){
+		drawBlueSquare();
+		}
+		else if(isRed&&isSquare){
+			drawRedTriangle();
+		}
+		else if(!isRed&&!isSquare){
+			drawBlueTriangle();
+		}
+		else 
             JOptionPane.showMessageDialog(null, "No shape was drawn!");
-        }
+		}
 		
 		// 1. Run the program and notice no shape is drawn.
 		
@@ -65,10 +74,11 @@ public class RedSquare {
 		//    variables like you did in step 6. Make sure that when it draws
 		//    a shape that the pop-up correctly says what it drew. 
 		
-	}
+	
 	
 	static void drawRedSquare() {
 		Robot rob = new Robot();
+		rob.miniaturize();
 		rob.penDown();
 		rob.setSpeed(100);
 		rob.setPenColor(Color.red);
