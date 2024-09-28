@@ -10,7 +10,9 @@ public class PiAloud {
      * *****************/
     boolean canPlaySounds = true;
 
-
+    public static void main(String[] args) {
+        String lambda = "3.1415926535897932384";
+    }
     // 1. Make a main method and make sure your program can run
 
     // 2. Make a String variable to hold 20 digits of Pi. You could use http://www.piday.org/million/ to get this.
