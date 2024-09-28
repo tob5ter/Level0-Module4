@@ -55,7 +55,7 @@ public class WheresWaldo extends PApplet {
 
     @Override
     public void draw() {
-        
+        rect(10,10,10,10);
     }
 
     static public void main(String[] args) {
